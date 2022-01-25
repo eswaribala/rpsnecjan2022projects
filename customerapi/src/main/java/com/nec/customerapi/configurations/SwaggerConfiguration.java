@@ -32,7 +32,7 @@ public class SwaggerConfiguration {
     @Bean
     public Docket apiDocketcategoryv10() {
         return new Docket(DocumentationType.SWAGGER_2)
-        		.groupName("category-api-1.0")
+        		.groupName("customer-api-1.0")
                 .select()
                 .apis(RequestHandlerSelectors
                         .basePackage("com.nec.customerapi"))
@@ -53,7 +53,7 @@ public class SwaggerConfiguration {
     @Bean
     public Docket apiDocketcategoryv11() {
         return new Docket(DocumentationType.SWAGGER_2)
-        		.groupName("category-api-1.1")
+        		.groupName("customer-api-1.1")
                 .select()
                 .apis(RequestHandlerSelectors
                         .basePackage("com.nec.customerapi"))
