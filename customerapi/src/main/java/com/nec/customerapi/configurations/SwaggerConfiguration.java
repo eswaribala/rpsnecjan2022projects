@@ -36,7 +36,7 @@ public class SwaggerConfiguration {
                 .select()
                 .apis(RequestHandlerSelectors
                         .basePackage("com.nec.customerapi"))
-                .paths(PathSelectors.any())
+                .paths(PathSelectors.regex("/customers/v1.0.*"))
                 .build()
                 .apiInfo(getApiInfo())
                 .forCodeGeneration(true)
@@ -50,7 +50,27 @@ public class SwaggerConfiguration {
                 .securitySchemes(Lists.newArrayList(apiKey()))
                 .useDefaultResponseMessages(false);
     }
-    
+    @Bean
+    public Docket apiDocketcategoryv11() {
+        return new Docket(DocumentationType.SWAGGER_2)
+        		.groupName("category-api-1.1")
+                .select()
+                .apis(RequestHandlerSelectors
+                        .basePackage("com.nec.customerapi"))
+                .paths(PathSelectors.regex("/customers/v1.1.*"))
+                .build()
+                .apiInfo(getApiInfo())
+                .forCodeGeneration(true)
+                .genericModelSubstitutes(ResponseEntity.class)
+                .ignoredParameterTypes(Pageable.class)
+                .ignoredParameterTypes(java.sql.Date.class)
+                .directModelSubstitute(java.time.LocalDate.class, java.sql.Date.class)
+                .directModelSubstitute(java.time.ZonedDateTime.class, Date.class)
+                .directModelSubstitute(java.time.LocalDateTime.class, Date.class)
+                .securityContexts(Lists.newArrayList(securityContext()))
+                .securitySchemes(Lists.newArrayList(apiKey()))
+                .useDefaultResponseMessages(false);
+    }
     private ApiInfo getApiInfo() {
         return new ApiInfo(
                 "Inventory API",
