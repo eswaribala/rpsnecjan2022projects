@@ -1,4 +1,4 @@
-package com.nec.orderapi.models;
+package com.nec.paymentapi.models;
 
 import java.time.LocalDate;
 
