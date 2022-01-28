@@ -13,7 +13,7 @@ import com.nec.stockapi.models.Payment;
 import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
-@Slf4j
+
 public class StockapiApplication {
 
 	public static void main(String[] args) {
