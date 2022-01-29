@@ -4,7 +4,7 @@ spring.datasource:
   #username: sa
   #password: sa
   driverClassName: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/boainv2021db?useSSL=true&nullCatalogMeansCurrent=true 
+  url: jdbc:mysql://localhost:3306/necinv2022db?useSSL=true&nullCatalogMeansCurrent=true 
   username: root
   password: vignesh
 #spring.h2.console.enabled: true
@@ -45,6 +45,6 @@ spring.data.mongodb.database: customerdb
 spring.data.mongodb.url: mongodb://localhost:27017/stockdb
 #kafka properties
 kafka.bootstrapAddress: localhost:9092
-product.topic.name: boainv2021
+product.topic.name: necinv2021
 product.topic.group.id: group_id
 
